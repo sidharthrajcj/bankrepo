@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="text-align:center">
+    <img class="my_image my_image_padding" src="{% static 'img/bann.png' %}" alt="our products" width="1250px">
+</div><br><br><br>
+<div class="container" style="text-align:center;">
+    {% if user.is_authenticated %}
+    <a class="btn btn-dark" href="auth/requa">Click Here </a>
+   {% else %}
+        <a class="btn btn-dark" href="auth/login">Click Here </a>
+    {% endif  %}
+</div>
+
+{% endblock %}
